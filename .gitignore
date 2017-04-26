@@ -87,3 +87,10 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# my own
+*.pyc
+*.pyo
+app.db
+search.db
+flask
