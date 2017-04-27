@@ -94,3 +94,4 @@ ENV/
 app.db
 search.db
 flask
+tmp
