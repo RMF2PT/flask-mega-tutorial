@@ -2,6 +2,7 @@ microblog
 =========
 
 A microblogging web application written in Python and Flask using the series Flask Mega-Tutorial series that begins [here](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world).
+The git repo can be found [here](https://github.com/miguelgrinberg/microblog).
 
 Installation
 ------------
