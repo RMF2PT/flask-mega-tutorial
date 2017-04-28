@@ -20,3 +20,4 @@ My side notes
 -------------
 
 Currently, the application only allows login with OpenID through Yahoo accounts. OpenID is not a good option now. It works now, but it has limitations, so for a real live web application you should try OAuth Authentication.
+This tutorial has been followed in cloud9.io, meaning that some of the code has been adapted.
