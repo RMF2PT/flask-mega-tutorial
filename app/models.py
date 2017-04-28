@@ -54,7 +54,7 @@ class User(db.Model):
         return '<User %r>' % (self.nickname)
         
     def avatar(self, size):
-        return 'http://www.gravatar.com/avatar/%s?d=mm&s=%d' % (md5(self.email.encode('utf-8')).hexdigest(), size)
+        return 'http://www.gravatar.com/avatar/%s?d=monsterid&s=%d' % (md5(self.email.encode('utf-8')).hexdigest(), size)
     
     def follow(self, user):
         if not self.is_following(user):
