@@ -30,3 +30,5 @@ class EditForm(Form):
 class PostForm(Form):
     post = StringField('post', validators=[DataRequired()])
     
+class SearchFrom(Form):
+    search = StringField('search', validators=[DataRequired()])
