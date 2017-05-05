@@ -22,8 +22,12 @@ MAIL_PORT = 2525
 MAIL_USERNAME = None
 MAIL_PASSWORD = None
 
+# mailgun settings
+MAILGUN_DOMAIN=os.environ.get('MAILGUN_DOMAIN')
+MAILGUN_API_KEY=os.environ.get('MAILGUN_API_KEY')
+
 # administrator list
-ADMINS = ['you@example.com']
+ADMINS = ['rmf2pt@gmail.com']
 
 # pagination
 POSTS_PER_PAGE = 3
