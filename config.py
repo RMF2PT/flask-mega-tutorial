@@ -17,14 +17,16 @@ WHOOSH_BASE = os.path.join(basedir, 'search.db')
 MAX_SEARCH_RESULTS = 50
 
 # mail server settings
-MAIL_SERVER = 'localhost'
+MAIL_SERVER = 'smtp.mailgun.org'
 MAIL_PORT = 2525
-MAIL_USERNAME = None
-MAIL_PASSWORD = None
+MAIL_USE_TLS = True
+MAIL_USE_SSL = False
+MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
+MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
 
 # mailgun settings
-MAILGUN_DOMAIN=os.environ.get('MAILGUN_DOMAIN')
-MAILGUN_API_KEY=os.environ.get('MAILGUN_API_KEY')
+MAILGUN_DOMAIN = os.environ.get('MAILGUN_DOMAIN')
+MAILGUN_API_KEY = os.environ.get('MAILGUN_API_KEY')
 
 # administrator list
 ADMINS = ['rmf2pt@gmail.com']

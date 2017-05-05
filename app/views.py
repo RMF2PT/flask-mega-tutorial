@@ -5,6 +5,7 @@ from .forms import LoginForm, EditForm, PostForm, SearchFrom
 from .models import User, Post
 from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS
 from datetime import datetime
+from .emails import follower_notification 
 
 @lm.user_loader
 def load_user(id):
@@ -136,6 +137,7 @@ def follow(nickname):
     db.session.add(u)
     db.session.commit()
     flash('You are now following ' + nickname + '!')
+    follower_notification(user, g.user)
     return redirect(url_for('user', nickname=nickname))
     
 @app.route('/unfollow/<nickname>')
