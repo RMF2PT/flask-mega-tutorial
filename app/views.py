@@ -173,9 +173,3 @@ def search_results(query):
     return render_template('search_results.html',
                             query=query,
                             results=results)
-
-# This is for testing logging emails of errors with Mailgun API
-# @app.route('/server_crash')
-# def server_crash():
-#     raise ValueError('Rosebud')
-#     return "You will never see this"
