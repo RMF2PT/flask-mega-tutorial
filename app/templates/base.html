@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,12 +10,17 @@
         <link rel="stylesheet" href="/static/css/custom.css" type="text/css" />
         
         <!-- Moment.js -->
-        <script src="/static/js/moment.min.js"></script>
+        <script src="/static/js/moment-with-locales.min.js"></script>
+        {% if g.locale == 'pt' %}
+			<script>moment.locale('pt');</script>
+		{% elif g.locale == 'es' %} 
+			<script>moment.locale('es');</script>
+		{% endif %}
         
         {% if title %}
         <title>{{ title }} - microblog</title>
         {% else %}
-        <title>Welcome to microblog</title>
+        <title>{{ _('Welcome to microblog') }}</title>
         {% endif %}
     </head>
 
@@ -29,15 +34,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ url_for('index') }}">Microblog</a>
+                <a class="navbar-brand" href="{{ url_for('index') }}">microblog</a>
             </div>
     
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 {% if g.user.is_authenticated %}
-                <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
-                <li><a href="{{ url_for('user', nickname=g.user.nickname) }}">Your Profile</a></li>
-                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                <li class="active"><a href="{{ url_for('index') }}">{{ _('Home') }}</a></li>
+                <li><a href="{{ url_for('user', nickname=g.user.nickname) }}">{{ _('Your Profile') }}</a></li>
+                <li><a href="{{ url_for('logout') }}">{{ _('Logout') }}</a></li>
                 {% endif %}
             </ul>
             {% if g.user.is_authenticated %}
@@ -48,7 +53,7 @@
                 method="post" 
                 name="search">
                 {{ g.search_form.hidden_tag() }}
-                {{ g.search_form.search(size=20, placeholder="Search", class="search-query") }}
+                {{ g.search_form.search(size=20, placeholder=_('Search'), class="search-query") }}
             </form>
             {% endif %}
         </div><!-- /.navbar -->

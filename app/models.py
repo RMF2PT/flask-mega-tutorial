@@ -1,5 +1,6 @@
 from app import db, app
 from hashlib import md5
+import re
 
 import sys
 if sys.version_info >= (3, 0):
@@ -26,6 +27,10 @@ class User(db.Model):
                                 secondaryjoin=(followers.c.followed_id == id),
                                 backref=db.backref('followers', lazy='dynamic'),
                                 lazy='dynamic')
+    
+    @staticmethod
+    def make_valid_nickname(nickname):
+        return re.sub('[^a-zA-Z0-9_\.]', '', nickname)
     
     @staticmethod
     def make_unique_nickname(nickname):
