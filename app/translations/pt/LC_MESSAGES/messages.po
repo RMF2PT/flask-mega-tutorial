@@ -7,17 +7,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-05-09 15:41+0000\n"
+"POT-Creation-Date: 2017-05-11 11:45+0000\n"
 "PO-Revision-Date: 2017-05-09 17:19+0100\n"
+"Last-Translator: \n"
 "Language: pt\n"
 "Language-Team: pt <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.4.0\n"
-"Last-Translator: \n"
-"X-Generator: Poedit 2.0.1\n"
+
+#: app/__init__.py:18
+msgid "Please log in to access this page."
+msgstr "Por favor, identifique-se para aceder a esta página."
 
 #: app/forms.py:25
 msgid ""
@@ -28,55 +31,55 @@ msgstr ""
 "sublinhados."
 
 #: app/forms.py:30
-msgid "This nickname is already in use. Please shoose another one."
+msgid "This nickname is already in use. Please choose another one."
 msgstr "O nome de utilizador já existe. Por favor, escolha outro nome."
 
-#: app/views.py:47
+#: app/views.py:49
 msgid "Your post is now live!"
 msgstr "A sua mensagem foi publicada!"
 
-#: app/views.py:72
+#: app/views.py:74
 msgid "Invalid login. Please try again."
 msgstr "Login inválido. Por favor, tente novamente."
 
-#: app/views.py:105
+#: app/views.py:107
 #, python-format
 msgid "User %(nickname)s not found."
 msgstr "Utilizador %(nickname)s não encontrado."
 
-#: app/views.py:121
+#: app/views.py:123
 msgid "Your changes have been saved."
 msgstr "As suas alterações foram gravadas."
 
-#: app/views.py:133 app/views.py:153
+#: app/views.py:135 app/views.py:155
 #, python-format
 msgid "User %(nickname)s not found!"
 msgstr "Utilizador %(nickname)s não encontrado!"
 
-#: app/views.py:136
+#: app/views.py:138
 msgid "You can't follow yourself!"
 msgstr "Você não pode seguir você mesmo!"
 
-#: app/views.py:140
+#: app/views.py:142
 #, python-format
 msgid "Can't follow %(nickname)s."
 msgstr "Não é possível seguir %(nickname)s."
 
-#: app/views.py:144
+#: app/views.py:146
 #, python-format
 msgid "You are now following %(nickname)s!"
 msgstr "Você começou a seguir %(nickname)s!"
 
-#: app/views.py:156
+#: app/views.py:158
 msgid "You can't unfollow yourself!"
 msgstr "Você não pode deixar de seguir você mesmo!"
 
-#: app/views.py:160
+#: app/views.py:162
 #, python-format
 msgid "Can't unfollow %(nickname)s."
 msgstr "Não é possível deixar de seguir %(nickname)s."
 
-#: app/views.py:164
+#: app/views.py:166
 #, python-format
 msgid "You have stopped following %(nickname)s."
 msgstr "Você parou de seguir %(nickname)s!"
@@ -95,26 +98,25 @@ msgstr "Aconteceu um erro inesperado."
 
 #: app/templates/500.html:6
 msgid "The administrator has been notified. Sorry for the inconvenience!"
-msgstr ""
-"O administrador do site foi notificado. Pedimos desculpa pelo incómodo!"
+msgstr "O administrador do site foi notificado. Pedimos desculpa pelo incómodo!"
 
-#: app/templates/base.html:18
+#: app/templates/base.html:23
 msgid "Welcome to microblog"
 msgstr "Benvindo ao microblog"
 
-#: app/templates/base.html:38
+#: app/templates/base.html:43
 msgid "Home"
 msgstr "Início"
 
-#: app/templates/base.html:39
+#: app/templates/base.html:44
 msgid "Your Profile"
 msgstr "O Seu Perfil"
 
-#: app/templates/base.html:40
+#: app/templates/base.html:45
 msgid "Logout"
 msgstr "Logout"
 
-#: app/templates/base.html:51
+#: app/templates/base.html:56
 msgid "Search"
 msgstr "Pesquisar"
 
@@ -223,3 +225,7 @@ msgstr "Seguir"
 #: app/templates/user.html:22
 msgid "Unfollow"
 msgstr "Deixar de seguir"
+
+#~ msgid "This nickname is already in use. Please shoose another one."
+#~ msgstr "O nome de utilizador já existe. Por favor, escolha outro nome."
+

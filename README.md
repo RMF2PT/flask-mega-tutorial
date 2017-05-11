@@ -11,6 +11,8 @@ The tutorial referenced above explains how to setup a virtual environment with a
 
 The sqlite database must also be created before the application can run, and the `db_create.py` script takes care of that. See the [Database tutorial](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database) for the details.
 
+The command to install the requirements file: `$ pip install -r requirements.txt`
+
 Running
 -------
 
@@ -20,4 +22,7 @@ My side notes
 -------------
 
 Currently, the application only allows login with OpenID through Yahoo accounts. OpenID is not a good option now. It works now, but it has limitations, so for a real live web application you should try OAuth Authentication.
+
 This tutorial has been followed in cloud9.io, meaning that some of the code has been adapted.
+
+
