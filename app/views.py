@@ -6,7 +6,8 @@ from .forms import LoginForm, EditForm, PostForm, SearchFrom
 from .models import User, Post
 from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS, LANGUAGES
 from datetime import datetime
-from .emails import follower_notification 
+from .emails import follower_notification
+from langdetect import detect as detect_language
 
 @lm.user_loader
 def load_user(id):
@@ -42,8 +43,13 @@ def internal_error(error):
 def index(page=1):
     form = PostForm()
     if form.validate_on_submit():
-        post = Post(body=form.post.data, timestamp=datetime.utcnow(),
-                    author=g.user)
+        language = detect_language(form.post.data)
+        if language == 'UNKNOWN' or len(language) > 5:
+            language = ''
+        post = Post(body=form.post.data, 
+                    timestamp=datetime.utcnow(),
+                    author=g.user,
+                    language=language)
         db.session.add(post)
         db.session.commit()
         flash(gettext('Your post is now live!'))

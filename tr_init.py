@@ -5,7 +5,7 @@ import sys
 if sys.platform =='win32':
     pybabel = 'flask\\Scripts\\pybabel'
 else:
-    pybabel = 'flask/bin/pybabel'
+    pybabel = '/home/ubuntu/.virtualenvs/venv1/bin/pybabel'
 
 if len(sys.argv) != 2:
     print("usage: tr_init <language-code>")

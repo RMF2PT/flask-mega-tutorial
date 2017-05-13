@@ -29,6 +29,9 @@ MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
 MAILGUN_DOMAIN = os.environ.get('MAILGUN_DOMAIN')
 MAILGUN_API_KEY = os.environ.get('MAILGUN_API_KEY')
 
+# microsoft translation service
+MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
+
 # administrator list
 ADMINS = ['rmf2pt@gmail.com']
 
