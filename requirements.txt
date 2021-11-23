@@ -1,4 +1,4 @@
-Babel==2.4.0
+Babel==2.9.1
 Flask==0.12.1
 Flask-Babel==0.11.2
 Flask-Login==0.4.0
